@@ -1,0 +1,25 @@
+body{background: linear-gradient(90deg, rgb(180, 223, 238), rgb(60, 138, 162) );
+  
+
+}
+.App {
+  height: 100%;
+  text-align: center;
+}
+
+*{
+  --blue:rgba(48, 51, 199, 0.85);
+  --yellow: rgb(235, 214, 59);
+  --gray: rgb(62, 59, 59);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+ align-items: center;
+  background:linear-gradient(90deg, rgb(180, 223, 238), rgb(60, 138, 162) );
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+}
