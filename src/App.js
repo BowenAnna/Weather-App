@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="App">
       <Nav />
-    </div>
+      </div>
     </Router>
 
   );
