@@ -9,7 +9,8 @@ export default function Input(props) {
 
         const handleSubmit=(event)=>{
             event.preventDefault()
-            props.citysearch(formData.searchterm)
+            props.dailysearch(formData.searchterm)
+            props.hourlysearch(formData.searchterm)
         }
     
     return(
