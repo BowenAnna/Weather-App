@@ -15,7 +15,7 @@ import CountryCodeList from "./CountryCodeList";
 
 
 const Nav = () => {
-  const [searchQuery, setSearchQuery] = useState(" New York, US");
+  const [searchQuery, setSearchQuery] = useState(" Washington, D.C., US");
   const [weatherData, setWeatherData] = useState(null);
   const [hourlyData, setHourlyData] = useState(null);
   const [loading, setLoading] = useState(false);
