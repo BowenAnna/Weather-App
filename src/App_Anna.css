@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --blue: rgb(3, 148, 192);
+  --yellow: rgb(235, 214, 59);
+  --gray: rgb(62, 59, 59);
+  --red: rgb(222, 68, 8);
+}
+
+.App {
+  height: 100%;
+  text-align: center;
+}
+
+/* body {
+  background: linear-gradient(90deg, rgb(216, 237, 246), rgb(126, 217, 245));
+}  */
+
+
+/* Daily Styling **************************/
+.daily-main-div{margin-top: 50px;
+  /* background-image: linear-gradient(45deg, #80AAFF, #4080FF); */
+/* padding: 100px;
+width: 1000px; */
+height: 750px;
+width: 80%;
+margin: 50px auto 0 auto;}
+
+.daily-top-div {
+  width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  border: 1px solid rgb(60, 138, 162);
+  border-radius: 10px;
+  padding: 0;
+  background-color: #a1cffa;
+}
+
+.daily-bottom-div {
+  width: 700px;
+  margin: 0 auto;
+  border: 1px solid rgb(60, 138, 162);
+  border-radius: 10px;
+  margin-top: 50px;
+  background-color: #a1cffa;
+}
+
+.daily-city-title {
+  padding: 0;
+  height: 50px;
+  background-color: rgb(42, 126, 253);
+  opacity: 0.5;
+  color: white;
+  justify-content: flex-start;
+  border-radius: 10px 10px 0 0;
+  margin-top: 0;
+}
+
+.daily-side-by-side {
+  width: 50%;
+ margin: 20px;
+}
+
+.daily-large-icon{
+  height: 150px;
+  }
+
+.daily-small-icon {
+    height: 70px;
+  }
+
+.daily-enlarged{
+    height: 100px;
+  }
+
+  .daily-params {
+    display: flex;
+  }
+
+  #daily-temp {
+    font-size: 70px;
+  }
+
+  h1 {
+    text-align: left;
+    margin-left: 20px;
+    padding: 0;
+  }
+
+
+/*Hourly Styling****************************/
+.hourly-div-blocks {
+  border-bottom: 1px solid black;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.hourly-main-block {
+  height: 400px;
+  display: block;
+  width: 80%;
+  overflow-y: scroll;
+  height: 750px;
+margin: 20px auto 0 auto;
+}
+
+.hourly-div-blocks:last-child {
+  border-bottom: none;
+}
+
+/* Footer Styling***************************/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(85, 137, 189);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 50px;}
+
+
+
+
+
+
+
+
+
