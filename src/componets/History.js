@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import WeatherInfoComponent from './WeatherInfoComponent';
 import App_Bri from "../App_Bri.css"
-
-
-
 const History = ({geocodeData }) => {
   console.log("geocodeData in Nav.jsx:", geocodeData);
   const [weatherData, setWeatherData] = useState(null);
@@ -14,12 +11,10 @@ const History = ({geocodeData }) => {
       const startTimestamp = new Date(selectedDate).getTime() / 1000;
       const API_KEY1 = "f0900d9a761062ebbafd9397b5887886";
       const response = await fetch(`https://history.openweathermap.org/data/2.5/history/city?lat=${lat}&lon=${lon}&type=hour&start=${startTimestamp}&end=${startTimestamp + 86400}&appid=${API_KEY1}&units=imperial`);
-    
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       const data = await response.json();
-      console.log(data);
       // Assuming you want data for the first hour of the selected day
       if (data.list && data.list.length > 0) {
         setWeatherData(data.list[0]);
@@ -29,7 +24,6 @@ const History = ({geocodeData }) => {
     } catch (error) {
       console.error('Error fetching data:', error);
     }
-    
   };
   const handleFormSubmit = (event) => {
     event.preventDefault(); // Prevents the default form submission behavior
@@ -46,17 +40,18 @@ const History = ({geocodeData }) => {
   };
   return (
     <div>
-      <form onSubmit={handleFormSubmit} >
-        <label className='nav-input'>
+      <form className='history-form' onSubmit={handleFormSubmit} >
+        <label>
            <input
+            id='history-input'
             type="date"
             value={selectedDate}
             onChange={(e) => setSelectedDate(e.target.value)}
-          />
+            />
         </label>
-        <button type="submit">Get Historical Weather</button>
+        <button id="history-btn" type="submit">Get Historical Weather</button>
       </form>
-      <WeatherInfoComponent weatherData={weatherData} />
+      <WeatherInfoComponent  weatherData={weatherData} />
     </div>
   );
   };

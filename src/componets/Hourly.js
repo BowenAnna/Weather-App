@@ -8,9 +8,9 @@ import WeatherIcon from "../functions/WeatherIcon";
 export default function Hourly({ hourlyData }) {
 
   return (
-      <div className="main-block">
+      <div className="hourly-main-block">
         {Array.from({ length: 24 }, (_, index) => (
-          <div key={index} className="div-blocks">
+          <div key={index} className="hourly-div-blocks">
             <h3>
               <TimeFormat timestamp={hourlyData?.list?.[index]?.dt} />
             </h3>

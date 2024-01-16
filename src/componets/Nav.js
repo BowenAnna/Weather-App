@@ -1,8 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faTemperatureHigh, faTemperatureLow } from "@fortawesome/free-solid-svg-icons";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from './Home';
-import Header from "./Header";
 import About from "./About";
 import History from "./History";
 import TenDaysCard from "./TenDaysCard";
@@ -10,10 +9,13 @@ import Hourly from "./Hourly";
 import Daily from "./Daily"
 import React, { useState, useEffect } from 'react';
 import App_Bri from "../App_Bri.css"
+import BigWeatherIcon from "../functions/BigWeatherIcon";
+import CountryCodeList from "./CountryCodeList";
+
 
 
 const Nav = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("Washington, D.C., US");
   const [weatherData, setWeatherData] = useState(null);
   const [hourlyData, setHourlyData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -77,39 +79,55 @@ const Nav = () => {
     }
   };
 
+  useEffect(() => {
+    setSearchQuery();
+    handleSearch();    
+  }, []); 
+
   return (
     <div>
       <header >
-      {/* <div className="top" style={{width: "100%", backgroundColor: "var(--blue)", height: "85px"}}> */}
-            <h1 style={{textAlign:"center", width: "100%"}}>"BAM" Weather</h1>
-        <label>
-          <input type="text" placeholder="Enter city, state, country" value={searchQuery} onChange={handleInputChange} />
+        <img src="./logo3.png" style={{height: "80px", margin: "40px auto 0 auto"}}/>
+              
+            </header>
+            <div className="header-div">
+            
+        <label >
+          <input type="text" placeholder=" Enter city, state, country" value={searchQuery} onChange={handleInputChange} style={{borderRadius:"5px", height:"30px"}}/>
         </label>
-        <button onClick={handleSearch} disabled={loading} className='nav-input' type="submit"><FontAwesomeIcon icon={faMagnifyingGlass} color='white'/>
-          {loading ? 'Searching...' : 'Search'}
-        </button>
-      </header>
-
-      <ul>
+        <div className="button-style">
+        <button onClick={handleSearch} disabled={loading} className='nav-input' type="submit">
+        <FontAwesomeIcon icon={faMagnifyingGlass} color="white"/>
        
-        <li>
-          <Link to="/">Daily</Link>
+          {loading ? 'Searching...' : ''}
+        </button>
+
+        
+        </div>
+        {/* <FontAwesomeIcon icon={faMagnifyingGlass} styles={{ height:"30px"}}/> */}
+        </div>
+        <span id="country-link"><Link  to="/about/countrycodelist" style={{heigt:"10px", color:"black"}}>Country Codes </Link></span>
+
+      <ul className="ul-nav">
+       
+        <li >
+          <Link className="links" to="/">Daily</Link>
+        </li>
+        <li >
+          <Link className="links"to="/hourly">Hourly</Link>
         </li>
         <li>
-          <Link to="/hourly">Hourly</Link>
+          <Link className="links" to="/tendays">10 Days</Link>
         </li>
         <li>
-          <Link to="/tendays">10 Days</Link>
+          <Link  className="links" to="/history">365 Days History</Link>
         </li>
         <li>
-          <Link to="/history">365 Days History</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
+          <Link className="links" to="/about">About</Link>
         </li>
       </ul>
       <Routes>
-        <Route path="" element={<Daily weatherData={weatherData} />} />
+        <Route path="" element={<Daily weatherData={weatherData} setSearchQuery={setSearchQuery} handleSearch={handleSearch}/>} />
         <Route path="/hourly" element={<Hourly hourlyData={hourlyData} />} />
         <Route
           path="/tendays"
@@ -120,6 +138,7 @@ const Nav = () => {
           element={<History geocodeData={geocodeData} />}
         />
         <Route path="/about" element={<About />} />
+        <Route path="/about/countrycodelist" element={<CountryCodeList />} />
       </Routes>
       {loading && <p>Loading...</p>}
     </div>
