@@ -1,0 +1,76 @@
+
+.App-Section {
+  font-family: 'Lora', serif;
+  
+}
+
+body {
+  background-image: linear-gradient(to right,  rgb(22, 79, 136), rgb(115, 167, 219));
+}
+
+.nav-input{
+  font-family: 'Lora', serif;
+  color:white;
+  font-size: larger;
+}
+
+input{
+  height: 40px;
+}
+
+ul{
+  background-color: rgb(85, 137, 189);
+  border: #37618b;
+  margin-top: 20px;
+  padding: 16px;
+  display:flex;
+  justify-content: space-evenly;
+  list-style: none;
+  font-family: 'Lora', serif;
+}
+
+a {
+  font-family: 'Lora', serif;
+  text-decoration: none;
+  background-color: DodgerBlue;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+a:hover {background: rgb(115, 167, 219);}
+
+form {
+display: flex;
+justify-content: center;
+font-family: 'Lora', serif;
+margin-top: 3em;
+}
+
+button:hover {background: rgb(115, 167, 219);}
+
+button{
+  font-family: 'Lora', serif;
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.weather-div{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3em;
+  align-content: stretch;
+}
+
+p {
+  flex-grow: 1;
+}
+
+
