@@ -95,7 +95,7 @@ export default function Daily({ weatherData }) {
         </h3>
         <p style={{textAlign:"left"}}>{weatherData?.wind?.speed} mph</p>
           <h3 style={{textAlign:"left", borderTop:"1px solid black"}}><FontAwesomeIcon icon={faEye} /> Visibility</h3>
-        <p style={{textAlign:"left"}}>{Math.floor(weatherData?.visibility)*0.00062} mi</p>
+        <p style={{textAlign:"left"}}>{Math.floor((weatherData?.visibility)*0.00062).toFixed(2)} mi</p>
           </div>
           </div>
       </div>
