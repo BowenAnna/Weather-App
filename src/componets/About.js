@@ -34,7 +34,7 @@ export default function About() {
 </ul>
 <h3 className="h3-about">Contributors</h3>
 <ul className="ul-about">
-  <a href="www.linkedin.com/in/brianna-anulo"><li className="li-about">Brianna</li></a>
+  <a href="https://www.linkedin.com/in/brianna-anulo/"><li className="li-about">Brianna</li></a>
  <a href="https://www.linkedin.com/in/realannabowen/"> <li className="li-about">Anna</li></a>
   <a href="https://www.linkedin.com/in/esser-mishelle/"><li className="li-about">Mishelle</li></a>
 </ul>
