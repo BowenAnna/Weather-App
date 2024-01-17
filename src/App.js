@@ -1,16 +1,20 @@
-/* eslint-disable no-unused-vars */
-import "./App.css";
-import React from "react";
-import TenDays from "./pages/TenDays";
-import TenDaysCard from "./pages/TenDaysCard";
+import './App_Bri.css';
+import React from 'react';
+import {BrowserRouter as Router} from 'react-router-dom';
+import Nav from './componets/Nav';
+import Footer from "./componets/Footer";
 
-const App = () => {
+function App() {
   return (
-    <div className="App">
-      <TenDays />
-      {/* <TenDaysCard tenDaysData={tenDaysData} /> */}
+    <Router>
+      <div className="App">
+      <Nav />
+      <Footer/>
     </div>
+    </Router>
+    
+ 
   );
-};
+}
 
 export default App;

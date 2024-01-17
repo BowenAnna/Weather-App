@@ -1,0 +1,121 @@
+.App {
+  text-align: center;
+  /* background-image: "./images/background1.jpg"; */
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./images/background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.main-body {
+  /* background-color: white; */
+  background-color: transparent;
+  padding: 30px;
+  /* margin: 50px;  */
+  width: auto;
+ 
+}
+.weather-list {
+  /* margin: 30px; */
+  /* display: inline-block !important */
+  /* width: auto; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  /* background-image: url("./images/background2.jpg"); */
+  padding: 20px;
+  /* width: 1000px; */
+  width: auto;
+  /* height: 100vh; */
+  height: auto;
+  background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+  overflow-y: scroll;
+  height: 750px;
+}
+.tenDayTemp {
+  display: inline-block !important;
+}
+/* .weather-icon-div{
+  margin-bottom:-20px;
+  margin-top:100px;
+ 
+  display: flex;
+  justify-items:flex-end;
+} */
+.weather-icon-img {
+  width: 5rem;
+  height: auto;
+  margin-bottom:0;
+  margin-top:20px;
+  /* margin-top: auto; */
+  margin-right:0;
+  margin-left: 0;
+  padding-bottom: 0;
+  display: flex;
+  justify-self: end;
+}
+.weather-raindrop-img{
+  /* margin-left: 1rem;
+  margin-bottom: -.25rem; */
+  margin-top: -80px;
+  width: 25px;
+}
+.weather-wind-img{
+  width:40px;
+  height: 40px;
+  margin-bottom:15px;
+  margin-right: .3rem;
+  padding-bottom: 0px;
+}
+tr {
+  height: 20px;
+}
+td {
+  /* margin-left: 20px; */
+  height: 10px;
+  margin-top: 0;
+  padding: 20px;
+  /* padding-right: 10px 35px 10px 35px; */
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.weather-list td {
+  height: 25px;
+}
+.weather-list tr {
+  height: 15px !important;
+}
+.hidden {
+  display: none;
+}
+.AM-box {
+  width: 300px;
+  /* width: auto; */
+  padding: 5px;
+  margin: 5px;
+  /* border: solid #FFCC00; */
+}
+.PM-box {
+  width: 300px;
+  padding: 5px;
+  margin: 5px;
+  /* border: solid #FF9933; */
+}
+.input-form-all {
+  margin-top: 20px;
+  margin-bottom:-100px;
+  padding: 0px;;
+  justify-content: center;
+}
+.center-table {
+  display: flex;
+  justify-content: center;
+}
+/* td {
+  text-align: center;
+} */
